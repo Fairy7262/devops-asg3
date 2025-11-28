@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>Simple Message App</h1>
+
+<form action="/add" method="post">
+<input name="msg" placeholder="Enter message">
+<button type="submit">Save</button>
+</form>
+
+<ul>
+{% for m in msgs %}
+<li>{{ m[0] }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
