@@ -62,16 +62,13 @@ pipeline {
         }
     }
 
-    post {
+       post {
         always {
-            sh 'docker-compose down || true'
             sh 'docker rm -f chrome || true'
         }
         success {
-            echo "PIPELINE SUCCESS ✔✔✔"
-        }
-        failure {
-            echo "PIPELINE FAILED ❌"
+            echo "Pipeline success"
         }
     }
+
 }
